@@ -9,10 +9,7 @@ export default function TechnoAdd(props) {
 
   const { handleAddTechno } = props;
 
-  function handleChange(evt) {
-    const { name, value } = evt.target;
-    setTechno({ ...techno, [name]: value });
-  }
+  
 
   function handleSubmit(evt) {
     evt.preventDefault();
@@ -23,7 +20,10 @@ export default function TechnoAdd(props) {
       technodescription: '',
     });
   }
-
+function handleChange(evt) {
+    const { name, value } = evt.target;
+    setTechno({...techno, [name]: value });
+  }
   return (
     <div className="techno-add">
       <h1>Add a techno</h1>
